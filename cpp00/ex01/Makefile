@@ -1,9 +1,10 @@
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = 
+NAME = PhoneBook
 
-SRCS = 
+SRCS = main.cpp \
+		PhoneBook.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 
