@@ -1,3 +1,10 @@
+SEPIA = \033[38;5;180m
+BLACK = \033[0;30m
+WHITE = \033[1;37m
+GRAY = \033[0;37m
+RESET = \033[0m
+BOLD = \033[1m
+
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -5,6 +12,7 @@ NAME = PhoneBook
 
 SRCS = main.cpp \
 		PhoneBook.cpp \
+		Contact.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -22,6 +30,15 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+push:
+	@echo "$(SEPIA)$(BOLD)Uploading data to Bunker...$(RESET)"
+	@git add .
+	@echo -n "$(WHITE)Enter transmission message: $(RESET)"
+	@read commit_message; \
+	git commit -m "$$commit_message"; \
+	git push; \
+	echo "$(SEPIA)Data successfully transmitted: '$$commit_message'$(RESET)"
 
-.PHONY: all clean fclean re
+re: fclean all 
+
+.PHONY: all clean fclean re push

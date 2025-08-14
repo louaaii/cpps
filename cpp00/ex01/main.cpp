@@ -6,12 +6,11 @@
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:04:53 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/07/18 20:51:34 by lmokhtar         ###   ########.fr       */
+/*   Updated: 2025/08/14 17:30:07 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include "Contact.hpp"
 
 int	main()
 {
@@ -20,19 +19,18 @@ int	main()
     
     while(1)
     {   
-        if(std::cin.eof())
-        {
-            std::cout << "Exiting." << std::endl;
-            exit(0);
-        }
         std::cout << "Enter command (ADD, SEARCH, EXIT): ";
         std::getline(std::cin, command);
         if(!command.compare("ADD"))
-            PhoneBook.AddContact(Contact());
+            PhoneBook.set_info();
         else if(!command.compare("SEARCH"))
-            PhoneBook.SearchContact();
-        else if(!command.compare("EXIT"))
-            PhoneBook.Exit();
+            PhoneBook.get_info();
+        else if(!command.compare("EXIT") || std::cin.eof())
+        {
+            std::cout << "Exiting." << std::endl;
+            std::exit(0);
+        }
         command.clear();
     }   
+    return 0;
 }

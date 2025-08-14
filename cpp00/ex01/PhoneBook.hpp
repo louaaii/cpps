@@ -6,7 +6,7 @@
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:11:09 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/07/18 20:51:47 by lmokhtar         ###   ########.fr       */
+/*   Updated: 2025/08/14 17:41:59 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,13 @@ class PhoneBook
 {
     private:
         Contact contacts[8];
-        int Index;
+        // int Index;
     public:
-        // PhoneBook() : contactCount(0) {}
-        // ~PhoneBook() {}
+        PhoneBook(); 
+        ~PhoneBook();
 
-        void AddContact(const Contact& contact);
-        void SearchContact() const;
-        void Exit() const;
+        void set_info();
+        void get_info();
 };
 
 #endif
