@@ -21,6 +21,15 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
+push:
+	@echo "$(SEPIA)$(BOLD)Uploading data to Bunker...$(RESET)"
+	@git add .
+	@echo -n "$(WHITE)Enter transmission message: $(RESET)"
+	@read commit_message; \
+	git commit -m "$$commit_message"; \
+	git push; \
+	echo "$(SEPIA)Data successfully transmitted: '$$commit_message'$(RESET)"
+
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re push

@@ -6,7 +6,7 @@
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 18:15:13 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/07/18 18:26:10 by lmokhtar         ###   ########.fr       */
+/*   Updated: 2025/09/09 18:49:43 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ int main(int ac, char **av)
     {
         for(int i = 1; i < ac; i++)
         {
-            for(int j = 0; av[i][j]; j++)
-                std::cout << (char)toupper(av[i][j]);
+            std::string str = av[i];
+            for(int j = 0; str[j]; j++)
+                std::cout << (char)toupper(str[j]);
         }
     }
     std::cout << std::endl;
