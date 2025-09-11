@@ -6,31 +6,34 @@
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:04:53 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/08/14 17:30:07 by lmokhtar         ###   ########.fr       */
+/*   Updated: 2025/09/11 17:18:47 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-int	main()
+
+int	main(void)
 {
-	PhoneBook PhoneBook;
-    std::string command;
-    
-    while(1)
-    {   
-        std::cout << "Enter command (ADD, SEARCH, EXIT): ";
-        std::getline(std::cin, command);
-        if(!command.compare("ADD"))
-            PhoneBook.set_info();
-        else if(!command.compare("SEARCH"))
-            PhoneBook.get_info();
-        else if(!command.compare("EXIT") || std::cin.eof())
-        {
-            std::cout << "Exiting." << std::endl;
-            std::exit(0);
-        }
-        command.clear();
-    }   
-    return 0;
+	PhoneBook	phoneBook;
+	std::string input;
+
+	while (1)
+	{
+		std::cout << "Commands: ADD, SEARCH, EXIT" << std::endl;
+		std::getline(std::cin, input);
+		if (std::cin.eof() || !input.compare("EXIT")) {
+			std::cout << "Exiting ..." << std::endl;
+			std::exit(0);
+		}
+		if (!input.compare("ADD"))
+		phoneBook.set_info();
+		else if (!input.compare("SEARCH"))
+			if (!phoneBook.get_info()) {
+				std::cout << "Exiting ..." << std::endl;
+				std::exit(0);
+			}
+		input.clear();
+	}
+	return (0);
 }
