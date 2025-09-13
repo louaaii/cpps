@@ -8,7 +8,7 @@ BOLD = \033[1m
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Float
+NAME = Float3
 
 SRCS = main.cpp Fixed.cpp
 
@@ -38,5 +38,6 @@ push:
 	echo "$(SEPIA)Data successfully transmitted: '$$commit_message'$(RESET)"
 
 re: fclean all 
+
 
 .PHONY: all clean fclean re push
