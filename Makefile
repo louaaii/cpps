@@ -8,9 +8,9 @@ BOLD = \033[1m
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Float3
+NAME = 
 
-SRCS = main.cpp Fixed.cpp
+SRCS = 
 
 OBJS = $(SRCS:.cpp=.o)
 
