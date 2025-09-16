@@ -6,7 +6,7 @@
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 19:19:58 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/09/16 18:11:44 by lmokhtar         ###   ########.fr       */
+/*   Updated: 2025/09/16 20:03:24 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,14 @@
 #include <string>
 
 class Brain {
-private:
-    std::string ideas[100];
+    private:
+        std::string ideas[100];
 
-public:
-    Brain();
-    Brain(const Brain& other);        
-    Brain& operator=(const Brain& other); 
-    ~Brain();
-    
-    void setIdea(int index, const std::string& idea);
-    std::string getIdea(int index) const;
+    public:
+        Brain();
+        Brain(const Brain& other);        
+        Brain& operator=(const Brain& other); 
+        ~Brain();
 };
 
 #endif

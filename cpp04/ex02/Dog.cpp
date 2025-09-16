@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/15 19:13:49 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/09/16 19:58:52 by lmokhtar         ###   ########.fr       */
+/*   Created: 2025/09/15 19:14:42 by lmokhtar          #+#    #+#             */
+/*   Updated: 2025/09/16 20:02:43 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Dog.hpp"
 
-Cat::Cat() : Animal() {
-    type = "Cat";
+Dog::Dog() : Animal() {
+    type = "Dog";
     brain = new Brain();  
-    std::cout << "Cat constructor called" << std::endl;
+    std::cout << "Dog constructor called" << std::endl;
 }
 
-Cat::~Cat() {
+Dog::~Dog() {
     delete brain;  
-    std::cout << "Cat destructor called" << std::endl;
+    std::cout << "Dog destructor called" << std::endl;
 }
 
-void Cat::makeSound() const {
-    std::cout << "Meow " << std::endl;
+void Dog::makeSound() const {
+    std::cout << "Woof " << std::endl;
 }
 
-Cat::Cat(const Cat &other) : Animal(other) {
+Dog::Dog(const Dog &other) : Animal(other) {
     this->type = other.type;
     this->brain = new Brain(*(other.brain)); 
 }
 
-Cat &Cat::operator=(const Cat &other) {
+Dog &Dog::operator=(const Dog &other) {
     if (this != &other) {
         Animal::operator=(other);
         this->type = other.type;
         delete this->brain; 
-        this->brain = new Brain(*(other.brain));
+        this->brain = new Brain(*(other.brain)); 
     }
     return *this;
 }

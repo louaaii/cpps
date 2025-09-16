@@ -6,7 +6,7 @@
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 19:14:18 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/09/15 19:14:29 by lmokhtar         ###   ########.fr       */
+/*   Updated: 2025/09/16 19:55:47 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class Dog : public Animal {
         Dog();
         ~Dog();
         void makeSound() const;
+        Dog(const Dog& other);
+        Dog& operator=(const Dog& other);
 };
 
 #endif

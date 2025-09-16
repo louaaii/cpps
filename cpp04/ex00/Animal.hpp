@@ -6,7 +6,7 @@
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 19:11:47 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/09/16 18:36:32 by lmokhtar         ###   ########.fr       */
+/*   Updated: 2025/09/16 19:55:52 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ class Animal {
         std::string type;
     public:
         Animal();
+        Animal(const Animal& other);
+        Animal& operator=(const Animal& other);
         virtual ~Animal();
         virtual void makeSound() const;
         std::string getType() const;

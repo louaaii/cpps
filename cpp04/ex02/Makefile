@@ -8,7 +8,7 @@ BOLD = \033[1m
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Brain
+NAME = NoAnimal
 
 SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 

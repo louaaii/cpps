@@ -6,13 +6,13 @@
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 19:13:49 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/09/16 18:38:16 by lmokhtar         ###   ########.fr       */
+/*   Updated: 2025/09/16 19:55:21 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() {
+Cat::Cat() : Animal() {
     this->type = "Cat";
     std::cout << "Cat constructor called" << std::endl;
 }
@@ -25,6 +25,16 @@ void Cat::makeSound() const {
     std::cout << "Meow " << std::endl;
 }
 
+Cat::Cat(const Cat& other) : Animal(other) {
+    this->type = other.type;
+}
+
+Cat& Cat::operator=(const Cat& other) {
+    if (this != &other) {
+        this->type = other.type;
+    }
+    return *this;
+}
 
 
 WrongCat::WrongCat() {
