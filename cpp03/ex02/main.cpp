@@ -6,7 +6,7 @@
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 18:08:37 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/09/16 17:34:30 by lmokhtar         ###   ########.fr       */
+/*   Updated: 2025/09/16 17:38:17 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ int main( void ) {
     FragTrap f("Talal");
 
     a.attack("Lucas");
-    b.takeDamage(30);
-    b.beRepaired(10);
+    b.takeDamage(0);
+    b.beRepaired(0);
     d.attack("Cyril");
     c.takeDamage(20);
     c.guardGate();
     f.attack("Houssein");
-    e.takeDamage(30);
+    e.takeDamage(20);
     e.beRepaired(40);
     f.highFivesGuys();
     e.highFivesGuys();
