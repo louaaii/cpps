@@ -6,7 +6,7 @@
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 18:43:27 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/09/16 17:31:19 by lmokhtar         ###   ########.fr       */
+/*   Updated: 2025/09/16 17:37:24 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
     hitPoints = 100;
-    energyPoints = 100;
-    attackDamage = 30;
+    energyPoints = 50;
+    attackDamage = 20;
     std::cout << "ScavTrap " << name << " is born" << std::endl;
 }
 

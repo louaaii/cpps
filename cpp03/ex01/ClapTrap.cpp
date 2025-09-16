@@ -6,13 +6,13 @@
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 18:09:39 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/09/15 18:42:07 by lmokhtar         ###   ########.fr       */
+/*   Updated: 2025/09/16 17:35:58 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(100), energyPoints(50), attackDamage(20) {
+ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {
     std::cout << "ClapTrap " << name << " created" << std::endl;
 }
 
