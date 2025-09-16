@@ -6,7 +6,7 @@
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 19:12:57 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/09/16 20:02:10 by lmokhtar         ###   ########.fr       */
+/*   Updated: 2025/09/16 20:21:07 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ Animal::~Animal() {
 }
 
 void Animal::makeSound() const {
-    std::cout << "Animal sound" << std::endl;
 }
 
 std::string Animal::getType() const {
