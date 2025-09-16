@@ -6,7 +6,7 @@
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 19:21:08 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/09/16 18:11:31 by lmokhtar         ###   ########.fr       */
+/*   Updated: 2025/09/16 20:13:03 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,4 @@ Brain::~Brain() {
     std::cout << "Brain destructor called" << std::endl;
 }
 
-void Brain::setIdea(int index, const std::string& idea) {
-    if (index >= 0 && index < 100) {
-        ideas[index] = idea;
-    }
-}
-
-std::string Brain::getIdea(int index) const {
-    if (index >= 0 && index < 100) {
-        return ideas[index];
-    }
-    return "";
-}
 

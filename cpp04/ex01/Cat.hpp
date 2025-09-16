@@ -6,7 +6,7 @@
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 19:13:22 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/09/16 19:17:50 by lmokhtar         ###   ########.fr       */
+/*   Updated: 2025/09/16 20:16:45 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,6 @@ class Cat : public Animal {
         Cat& operator=(const Cat& other); 
         ~Cat();
         void makeSound() const;
-        void setBrainIdea(int index, std::string idea);
-        std::string getBrainIdea(int index) const;
-        Brain* getBrain() const { return brain; }
 };
 
 #endif
