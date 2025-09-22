@@ -6,7 +6,7 @@
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 18:09:39 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/09/16 17:35:58 by lmokhtar         ###   ########.fr       */
+/*   Updated: 2025/09/22 16:21:47 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,10 @@ void ClapTrap::attack(const std::string& target){
 }
 
 void ClapTrap::takeDamage(unsigned int amount){
-    std::cout << "ClapTrap " << name << " takes " << amount << " damage" << std::endl;
-    if(hitPoints > 0)
+    if(hitPoints > 0){
+        std::cout << "ClapTrap " << name << " takes " << amount << " damage" << std::endl;
         hitPoints -= amount;
+    }
     else    
         std::cout << "ClapTrap " << name << " is already dead" << std::endl;        
 }
