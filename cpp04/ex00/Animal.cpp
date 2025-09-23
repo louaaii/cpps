@@ -6,7 +6,7 @@
 /*   By: lmokhtar <lmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 19:12:57 by lmokhtar          #+#    #+#             */
-/*   Updated: 2025/09/16 20:14:56 by lmokhtar         ###   ########.fr       */
+/*   Updated: 2025/09/23 18:46:29 by lmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,9 @@ std::string Animal::getType() const {
     return this->type;
 }
 
-Animal::Animal(const Animal& other) : type(other.type) {
+Animal::Animal(const Animal& other) {
     std::cout << "Animal copy constructor called" << std::endl;
+    type = other.type;
 }
 
 Animal& Animal::operator=(const Animal& other) {
