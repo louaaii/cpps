@@ -8,9 +8,9 @@ BOLD = \033[1m
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = 
+NAME = Bureaucrat
 
-SRCS = 
+SRCS = Bureaucrat.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
