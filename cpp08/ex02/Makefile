@@ -8,9 +8,9 @@ BOLD = \033[1m
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = span
+NAME = abomination
 
-SRCS = Span.cpp main.cpp
+SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
        
