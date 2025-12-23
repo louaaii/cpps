@@ -16,6 +16,7 @@ class MutantStack : public std::stack<T, Container>{
             std::stack<T, Container>::operator=(other);
             return *this;
         }
+        
         ~MutantStack(){}
         
         typedef typename Container::iterator iterator;
