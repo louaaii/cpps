@@ -12,15 +12,15 @@
 
 class Bitcoin{
     private : 
-        std::map<std::string, double> database;
+        std::map<std::string, double> data;
     public :
         Bitcoin();
         ~Bitcoin();
 
-        bool ValidDate(const std::string database);
-        bool ValidValue(const std::string database);
-        void input(const std::string database);
-        void ProcessData(const std::string database);
+        bool ValidDate(const std::string data);
+        bool ValidValue(const std::string data);
+        void input(const std::string data);
+        void ProcessData(std::map<std::string, double> &data);
         
 };
 
