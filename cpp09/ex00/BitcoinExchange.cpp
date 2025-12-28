@@ -7,18 +7,36 @@ Bitcoin::Bitcoin(){}
 Bitcoin::~Bitcoin(){}
 
 
-bool Bitcoin::ValidDate(const std::string data){
-    if(data.length() != 10)
+bool Bitcoin::ValidDate(const std::string date){
+    if(date.length() != 10)
         return false;
-    if(data[4] != '-' || data)
+    if(date[4] != '-' || date[7] != '-')
+        return false;
+    std::string ys = date.substr(0, 4);
+    std::string ms = date.substr(5, 2);
+    std::string ds = date.substr(8, 2);
+
+    char *end;
+    long year = std::strtol(ys.c_str(), &end, 10);
+    long month = std::strtol(ms.c_str(), &end, 10);
+    long day = std::strtol(ds.c_str(), &end, 10);
+
+    if(year < 1000 || year > 9999)
+        return false;
+    if(month < 1 || month > 12)
+        return false;
+    if(day < 1 || day > 31)
+        return false;
+
+    return true;
 }
 
 
-bool Bitcoin::ValidValue(const std::string data){
+bool Bitcoin::ValidValue(const std::string value){
 }
 
 
-void Bitcoin::input(const std::string datab){
+void Bitcoin::input(const std::string data){
 
 }
 
