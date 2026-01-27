@@ -19,14 +19,15 @@ class ScalarConverter{
         ScalarConverter(const ScalarConverter &other);
         ScalarConverter &operator=(const ScalarConverter &other);
         virtual ~ScalarConverter();
-
-    public :
-        static void convert(std::string value);
-		static void toChar(double value);
+        static void toChar(double value);
 		static void toInt(double value);
 		static void toFloat(double value);
 		static void toDouble(double value);
 		static double parseInput(std::string const &value);
+
+    public :
+        static void convert(std::string value);
+		
 
 };
 

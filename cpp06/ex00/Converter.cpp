@@ -22,7 +22,7 @@ void ScalarConverter::toChar(double val)
 	if (std::isnan(val) || val < 0 || val > 127 || val != static_cast<int>(val))
 		throw std::invalid_argument("impossible");
 	else if (!std::isprint(static_cast<int>(val)))
-		throw std::invalid_argument("Non displayable");
+		throw std::invalid_argument("Not displayable");
 	else
 		std::cout << "'" << static_cast<char>(static_cast<int>(val)) << "'" << std::endl;
 }
