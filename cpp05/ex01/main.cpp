@@ -31,4 +31,5 @@ int main() {
     {
         std::cout << e.what() << std::endl;
     }
+    return(0);
 }

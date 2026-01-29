@@ -15,14 +15,14 @@
 #define CYAN    "\033[36m"
 #define BOLD    "\033[1m" 
 
-class ShruberryCreationForm : public AForm {
+class shrubberyCreationForm : public AForm {
     private:
         std::string target;
     public:
-        ShruberryCreationForm(const std::string target);
-        ShruberryCreationForm(const ShruberryCreationForm &other);
-        ShruberryCreationForm &operator=(const ShruberryCreationForm &other);
-        ~ShruberryCreationForm();
+        shrubberyCreationForm(const std::string target);
+        shrubberyCreationForm(const shrubberyCreationForm &other);
+        shrubberyCreationForm &operator=(const shrubberyCreationForm &other);
+        ~shrubberyCreationForm();
 
         void execute(Bureaucrat const & executor) const;
 };

@@ -11,8 +11,8 @@ int main()
     try
     {
         Bureaucrat              Alfred( "Alfred", 10 );
-        ShruberryCreationForm   Plant( "Garden" );
-        ShruberryCreationForm   copy( Plant );
+        shrubberyCreationForm   Plant( "Garden" );
+        shrubberyCreationForm   copy( Plant );
 
         std::cout << std::endl;
         std::cout << copy << std::endl;

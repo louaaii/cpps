@@ -25,7 +25,7 @@ AForm* Intern::makeForm(const std::string formName, const std::string target){
     {
     case 0:
         std::cout << GREEN << "Intern creates " << RESET << formName << std::endl;
-        return (new ShruberryCreationForm(target));
+        return (new shrubberyCreationForm(target));
     case 1:
         std::cout << GREEN << "Intern creates " << RESET << formName << std::endl;
         return(new RobotomyRequestForm(target));

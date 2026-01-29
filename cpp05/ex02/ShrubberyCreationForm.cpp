@@ -2,23 +2,23 @@
 #include <fstream>
 
 
-ShruberryCreationForm::ShruberryCreationForm(const std::string target) : AForm("ShrubberyCreationForm", 145, 137),target(target){
-    std::cout << "ShruberryCreationForm created" << std::endl;
+shrubberyCreationForm::shrubberyCreationForm(const std::string target) : AForm("ShrubberyCreationForm", 145, 137),target(target){
+    std::cout << "shrubberyCreationForm created" << std::endl;
 }
 
-ShruberryCreationForm::~ShruberryCreationForm(){}
+shrubberyCreationForm::~shrubberyCreationForm(){}
 
-ShruberryCreationForm::ShruberryCreationForm(const ShruberryCreationForm &other) : AForm(other){
+shrubberyCreationForm::shrubberyCreationForm(const shrubberyCreationForm &other) : AForm(other){
     this->target = other.target;
 }
 
-ShruberryCreationForm &ShruberryCreationForm::operator=(const ShruberryCreationForm &other){
+shrubberyCreationForm &shrubberyCreationForm::operator=(const shrubberyCreationForm &other){
     if(this != &other)
         this->target = other.target;
     return *this;
 }
 
-void ShruberryCreationForm::execute(Bureaucrat const & executor) const{
+void shrubberyCreationForm::execute(Bureaucrat const & executor) const{
     if(!this->isSigned())
         throw AForm::FormNotSignedException();
     if(executor.getGrade() > this->getExecuteGrade())

@@ -11,7 +11,7 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name), grade(gr
 
 Bureaucrat::~Bureaucrat(){}
 
-Bureaucrat::Bureaucrat(const Bureaucrat &other){
+Bureaucrat::Bureaucrat(const Bureaucrat &other) : name(other.name){
     this->grade = other.grade;
 }
 
