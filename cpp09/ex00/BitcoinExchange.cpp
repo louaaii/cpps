@@ -33,11 +33,30 @@ bool Bitcoin::ValidDate(const std::string date){
 
 
 bool Bitcoin::ValidValue(const std::string value){
+
+    char *end;
+    double valid = std::strtod(value.c_str(), &end);
+    if(end == value.c_str() || *end == '\n')
+        return false;
+    if(valid > -1 && valid < 1001)
+        return true;
+    return false;
 }
 
 
 void Bitcoin::input(const std::string data){
-
+    
+    std::ifstream fil(data);
+    if(!fil.is_open()){
+        std::cerr << "Couldn't open file: " << data;
+        return;
+    }
+    std::string line;
+    while (std::getline(fil, line))
+    {
+        std::cout << line << std::endl;
+    }
+    fil.close();
 }
 
 
